@@ -23,8 +23,9 @@
             --text-muted:   #666666;
             --border:       #eeeeee;
             --header-bg:    rgba(255,255,255,0.97);
-            --header-sh:    0 4px 20px rgba(0,0,0,0.06);
-            --card-sh:      0 10px 30px rgba(0,0,0,0.06);
+            --header-sh:    0 4px 20px rgba(0,0,0,0.07);
+            --card-sh:      0 14px 34px rgba(20,25,40,0.09);
+            --card-sh-sm:   0 6px 18px rgba(20,25,40,0.06);
             --footer-bg:    #1a1a2e;
             --nav-text:     #333333;
             --toggle-track: #e2e8f0;
@@ -38,8 +39,9 @@
             --text-muted:   #8892aa;
             --border:       #2a2f45;
             --header-bg:    rgba(12,14,20,0.97);
-            --header-sh:    0 4px 24px rgba(0,0,0,0.35);
-            --card-sh:      0 10px 30px rgba(0,0,0,0.3);
+            --header-sh:    0 4px 24px rgba(0,0,0,0.4);
+            --card-sh:      0 14px 34px rgba(0,0,0,0.38);
+            --card-sh-sm:   0 6px 18px rgba(0,0,0,0.25);
             --footer-bg:    #07080f;
             --nav-text:     #e0e4f0;
             --toggle-track: #229191;
@@ -117,25 +119,26 @@
         }
         .btn-cta:hover { background:var(--fusa-teal); transform:translateY(-5px); box-shadow:0 16px 28px rgba(34,145,145,.35); }
 
-        .section-header { text-align:center; margin-bottom:60px; }
-        .section-header h2 { font-size:2.4rem; color:var(--text); transition:color .4s; }
+        .section-header { text-align:center; margin-bottom:70px; }
+        .section-header h2 { font-size:2.4rem; color:var(--text); letter-spacing:.5px; transition:color .4s; }
         .section-header p { color:var(--text-muted); margin-top:12px; }
         .line { width:80px; height:6px; background:var(--fusa-teal); margin:15px auto; border-radius:3px; }
 
-        #nosotros { padding:100px 0; background:var(--bg); transition:background .4s; }
-        .about-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:50px; align-items:center; margin-bottom:60px; }
+        #nosotros { padding:110px 0; background:var(--bg); transition:background .4s; }
+        .about-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:50px; align-items:center; margin-bottom:70px; }
         .about-grid h2 { color:var(--fusa-orange); margin-bottom:25px; }
         .about-grid > div > p { color:var(--text-muted); }
-        .mision-vision { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:38px; }
-        .mv-card { background:var(--bg-alt); padding:32px; border-left:6px solid var(--fusa-teal); border-radius:8px; transition:background .4s; }
+        .mision-vision { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-top:40px; }
+        .mv-card { background:var(--bg-alt); padding:32px; border-left:6px solid var(--fusa-teal); border-radius:8px; box-shadow:var(--card-sh-sm); transition:var(--transition), background .4s; }
+        .mv-card:hover { transform:translateY(-4px); box-shadow:var(--card-sh); }
         .mv-card h3 { color:var(--fusa-teal); margin-bottom:14px; font-size:.95rem; }
         .mv-card p { color:var(--text-muted); font-size:.92rem; }
-        .about-badge { background:linear-gradient(135deg,#1a1a2e 0%,#229191 100%); color:#fff; padding:50px; border-radius:15px; text-align:center; }
+        .about-badge { background:linear-gradient(135deg,#1a1a2e 0%,#229191 100%); color:#fff; padding:50px; border-radius:15px; text-align:center; box-shadow:0 20px 45px rgba(10,15,25,.28); }
         .about-badge h3 { margin-top:16px; }
         .about-badge p { opacity:.82; margin-top:12px; font-size:.92rem; }
 
-        .valores-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; margin-top:60px; }
-        .valor-card { text-align:center; padding:30px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; color:var(--text); transition:var(--transition), background .4s, border-color .4s; }
+        .valores-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; margin-top:60px; }
+        .valor-card { text-align:center; padding:30px; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; color:var(--text); box-shadow:var(--card-sh-sm); transition:var(--transition), background .4s, border-color .4s; }
         .valor-card:hover { border-color:var(--fusa-orange); transform:translateY(-5px); box-shadow:var(--card-sh); }
         .valor-card i { font-size:2.2rem; color:var(--fusa-orange); margin-bottom:14px; }
         .valor-card h4 { font-size:.82rem; letter-spacing:.5px; }
@@ -165,9 +168,10 @@
         .card-small h3 { margin-bottom:12px; font-size:.95rem; }
         .card-small p { color:var(--text-muted); font-size:.9rem; }
 
-        #proyectos { padding:80px 0 100px; }
-        .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-        .g-item { border-radius:14px; overflow:hidden; position:relative; cursor:pointer; }
+        #proyectos { padding:90px 0 110px; }
+        .gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+        .g-item { border-radius:14px; overflow:hidden; position:relative; cursor:pointer; box-shadow:var(--card-sh-sm); transition:var(--transition), box-shadow .4s; }
+        .g-item:hover { box-shadow:var(--card-sh); }
         .g-item img { width:100%; height:280px; object-fit:cover; display:block; transition:var(--transition); }
         .g-item.featured img { height:380px; }
         .g-item.wide { grid-column:span 2; }
@@ -449,10 +453,10 @@
             </div>
             <div class="footer-contact">
                 <h4>Contacto Oficial</h4>
-                <p><i class="fas fa-phone" style="color:var(--fusa-orange);"></i><a href="tel:+50689805903">8980-5903</a></p>
-                <p><i class="fas fa-envelope" style="color:var(--fusa-orange);"></i><a href="mailto:followupsa7@gmail.com">followupsa7@gmail.com</a></p>
+                <p><i class="fas fa-phone" style="color:var(--fusa-orange);"></i><a href="tel:+50688571414">8857-1414</a></p>
+                <p><i class="fas fa-envelope" style="color:var(--fusa-orange);"></i><a href="mailto:ventas@followupcrc.com">ventas@followupcrc.com</a></p>
                 <p><i class="fab fa-whatsapp" style="color:#25d366;"></i>
-                    <a href="https://wa.me/50689805903?text=Hola%20Follow%20Up%20S.A.,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">+506 8980-5903 (WhatsApp)</a>
+                    <a href="https://wa.me/50688571414?text=Hola%20Follow%20Up%20S.A.,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener">+506 8857-1414 (WhatsApp)</a>
                 </p>
             </div>
             <div>
@@ -460,7 +464,7 @@
                 <div class="social-icons">
                     <a href="https://www.facebook.com/share/1EmtPwk6cS/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/followupcr?igsh=MW0zZGJ5cnZ0M3k3cw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/50689805903?text=Hola%20Follow%20Up%20S.A.,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/50688571414?text=Hola%20Follow%20Up%20S.A.,%20quiero%20cotizar%20un%20servicio." target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
@@ -470,7 +474,7 @@
     </div>
 </footer>
 
-<a href="https://wa.me/50689805903?text=Hola%20Follow%20Up%20S.A.,%20quiero%20cotizar%20un%20servicio%20de%20limpieza%20de%20vidrios%20en%20altura."
+<a href="https://wa.me/50688571414?text=Hola%20Follow%20Up%20S.A.,%20quiero%20cotizar%20un%20servicio%20de%20limpieza%20de%20vidrios%20en%20altura."
    class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
     <i class="fab fa-whatsapp"></i>
 </a>
@@ -500,6 +504,77 @@
         alert(`¡Mensaje enviado con éxito!\n\nGracias ${nombre}. El equipo técnico de Follow Up S.A. le contactará pronto para coordinar la inspección.`);
         e.target.reset();
     };
+
+    // Click-spark: mismo efecto que dueño.app (components/click-spark.tsx), portado a JS vanilla
+    // con la paleta de marca de Follow Up (naranja/teal) en lugar de recrearlo desde cero.
+    (function initClickSpark() {
+        const canvas = document.createElement('canvas');
+        canvas.id = 'fu-click-spark';
+        canvas.style.cssText = 'position:fixed;inset:0;pointer-events:none;z-index:9999;';
+        document.body.appendChild(canvas);
+        const ctx = canvas.getContext('2d');
+
+        const sparkColors = ['#f05a28', '#229191'];
+        const sparkCount  = 8;
+        const sparkSize   = 10;
+        const sparkRadius = 18;
+        const duration    = 400;
+        let sparks = [];
+
+        function resizeCanvas() {
+            canvas.width  = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        const easeOut = t => t * (2 - t);
+
+        function draw(timestamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            sparks = sparks.filter(spark => {
+                const elapsed = timestamp - spark.startTime;
+                if (elapsed >= duration) return false;
+
+                const progress   = elapsed / duration;
+                const eased      = easeOut(progress);
+                const distance   = eased * sparkRadius;
+                const lineLength = sparkSize * (1 - eased);
+
+                const x1 = spark.x + distance * Math.cos(spark.angle);
+                const y1 = spark.y + distance * Math.sin(spark.angle);
+                const x2 = spark.x + (distance + lineLength) * Math.cos(spark.angle);
+                const y2 = spark.y + (distance + lineLength) * Math.sin(spark.angle);
+
+                ctx.strokeStyle = spark.color;
+                ctx.lineWidth   = 2;
+                ctx.globalAlpha = 1 - progress;
+                ctx.beginPath();
+                ctx.moveTo(x1, y1);
+                ctx.lineTo(x2, y2);
+                ctx.stroke();
+                ctx.globalAlpha = 1;
+
+                return true;
+            });
+            requestAnimationFrame(draw);
+        }
+        requestAnimationFrame(draw);
+
+        document.addEventListener('click', e => {
+            const now   = performance.now();
+            const color = sparkColors[Math.floor(Math.random() * sparkColors.length)];
+            for (let i = 0; i < sparkCount; i++) {
+                sparks.push({
+                    x: e.clientX,
+                    y: e.clientY,
+                    angle: (2 * Math.PI * i) / sparkCount,
+                    startTime: now,
+                    color
+                });
+            }
+        });
+    })();
 </script>
 </body>
 </html>
